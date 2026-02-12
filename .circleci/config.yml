@@ -10,8 +10,6 @@ workflows:
               only:
                 - main
 
-
-
 # Define the jobs we want to run for this project
 jobs:
   build:
@@ -35,5 +33,6 @@ jobs:
           key: dependency-cache-{{ checksum "package-lock.json" }}
           paths:
             - ./node_modules
-    
+
+
 
