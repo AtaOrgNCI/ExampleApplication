@@ -10,8 +10,8 @@ cd ExampleApplication/
 npm install
 
 # Env
-echo $PRIVATE_KEY > privatekey.pem
-echo $SERVER > server.crt
+printf "%s" "$PRIVATE_KEY" > privatekey.pem
+printf "%s" "$SERVER" > server.crt
 
 # Start the application with the process name example_app using pm2
 pm2 start ./bin/www --name example_app
